@@ -1,7 +1,7 @@
 @use "../abstract" as *;
 .header{
     &__wrapper{
-        display: flex;
+        
         justify-content: space-between;
         align-items: center;
 
@@ -10,11 +10,25 @@
                 display: block;
                 width: 3.5rem;
                 height: .5rem;
-                background-color: $clr-accent;
+                background: $clr-accent;
                 margin-bottom: .5rem;
+                transition: .5s ease;
             }
         }
+
+        .toggle__button.cross{
+            // span:nth-child(1) {transform: translate(5px, 10px) rotate(45deg);}
+            // span:nth-child(2) {opacity: 0;}
+            // span:nth-child(3) {transform: translate(5px, -10px) rotate(-45deg);}
+            opacity: 0;
+        }
     }
+
+    .dropdown.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
     .dropdown {
         position: fixed;
         background-color: rgba($clr-neutral, 0.8);
@@ -23,6 +37,9 @@
         width: 100%;
         top: 0;
         left: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: .2s ease-in-out;
         button {
             background-color: transparent;
             border: none;

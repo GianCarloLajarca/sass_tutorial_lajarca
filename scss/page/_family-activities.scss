@@ -1,0 +1,25 @@
+@use '../abstract' as *;
+
+.banner--family {
+    background-image: url('../../images/family-activities/family-banner-sm.jpeg');
+    @include mediaQuery {
+        background-image: url('../../images/family-activities/family-banner.jpeg');
+    }
+}
+
+.activities {
+    padding: 4rem 0;
+    &__wrapper {
+        a {
+            justify-self: center;
+        }
+    }
+
+    &__card {
+        border-radius: 3rem;
+        overflow: hidden;
+
+        width: 520px;
+        height: 520x;
+    }
+}
