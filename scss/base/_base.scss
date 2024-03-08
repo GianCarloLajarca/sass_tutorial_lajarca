@@ -5,6 +5,12 @@
     src: url('../../fonts/Speedee-Regular.woff');
 }
 
+
+@font-face {
+    font-family: "Speedee-bold";
+    src: url('../../fonts/Speedee-bold.woff');
+}
+
 html {
     font-size: 10px;
 }
@@ -32,7 +38,7 @@ p{
 }
 
 .container {
-    max-width: 110rem;
+    max-width: 98rem;
     padding: 0 1.6rem;
     margin: 0 auto;
 }
